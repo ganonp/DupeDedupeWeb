@@ -1,1 +1,1 @@
-web: java -jar target/dupededupeweb.jar
+java -Dserver.port=$PORT $JAVA_OPTS -jar target*.jar
