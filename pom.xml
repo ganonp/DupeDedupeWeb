@@ -165,9 +165,9 @@
 
 
         <dependency>
-            <groupId>dupe</groupId>
+            <groupId>com.github.jsimone</groupId>
             <artifactId>webapp-runner</artifactId>
-            <version>8.0.30.1</version>
+            <version>8.0.30.2</version>
         </dependency>
 
     </dependencies>
@@ -189,7 +189,16 @@
 
             </configuration>
         </plugin>
-
+        <plugin>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>2.3</version>
+            <configuration>
+            <descriptorRefs>
+                <descriptorRef>jar-with-dependencies</descriptorRef>
+            </descriptorRefs>
+            <finalName>helloworld</finalName>
+            </configuration>
+        </plugin>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-dependency-plugin</artifactId>
@@ -201,9 +210,9 @@
                     <configuration>
                         <artifactItems>
                             <artifactItem>
-                                <groupId>dupe</groupId>
+                                <groupId>com.github.jsimone</groupId>
                                 <artifactId>webapp-runner</artifactId>
-                                <version>8.0.30.1</version>
+                                <version>8.0.30.2</version>
                                 <destFileName>webapp-runner.jar</destFileName>
                             </artifactItem>
                         </artifactItems>
