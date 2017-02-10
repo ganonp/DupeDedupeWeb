@@ -195,7 +195,7 @@
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-dependency-plugin</artifactId>
-            <version>2.3</version>
+            <version>2.4</version>
             <executions>
                 <execution>
                     <phase>package</phase>
@@ -209,10 +209,14 @@
                                 <destFileName>webapp-runner.jar</destFileName>
                             </artifactItem>
                         </artifactItems>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals><goal>copy-dependencies</goal></goals>
                     </configuration>
                 </execution>
             </executions>
         </plugin>
+
     </plugins>
 </build>
 
